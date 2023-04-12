@@ -1,0 +1,29 @@
+$wt: #fff;
+$black: #232d3b;
+
+@mixin rpCenter($rp: no-repeat, $center: center center) {
+    background-repeat: $rp;
+    background-position: $center;
+}
+
+@mixin bgps($bgps: cover) {
+    -webkit-background-size: $bgps;
+    -moz-background-size: $bgps;
+    background-size: $bgps;
+}
+
+@mixin transition ($transition...) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+@mixin transform ($transform...) {
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    -o-transform: $transform;
+    transform: $transform;
+}

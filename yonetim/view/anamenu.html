@@ -1,0 +1,101 @@
+<div class="col-lg-12">
+    <div class="card">
+        <div class="header">
+            <h2>Ana Menü</h2>
+        </div>
+        <div class="card">
+            <!-- <div class="header">
+                <h2>İşlemler</h2>
+            </div> -->
+            <div class="body">
+                <button type="button" class="btn btn-outline-success" onclick="anamenu.add();">Ekle</button>
+                <!-- <button type="button" class="btn btn-outline-secondary"onclick="anamenu.edit();">Düzenle</button>
+                <button type="button" class="btn btn-outline-danger"onclick="anamenu.remove();">Sil</button> -->
+                <!-- <button id="remove" type="button" class="btn btn-outline-danger">Sil2</button> -->
+            </div>
+        </div>
+        <div class="body">
+            <div class="table-responsive">
+                <table class="table m-b-0" id="table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Menü Adı</th>
+                            <th>hytAnaKategori</th>
+                            <!-- <th>START Date</th>
+                            <th>END Date</th> -->
+                            <th>Yayın Durumu</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+<!-- Modal Dialogs ========= --> 
+<!-- Default Size -->
+<div class="modal fade" id="defaultModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="title" id="defaultModalLabel">Anamenü</h4>
+            </div>
+            <div class="modal-body"> 
+                
+                    <!-- <div class="header">
+                        <h2>Adı</h2>
+                    </div> -->
+                    
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-default">Adı</span>
+                            </div>
+                            <input name="adi" id="adi" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                
+                    
+                 
+            
+            </div> <!-- modal body-->
+
+            <div class="modal-footer">
+                <input type="hidden" name="id" id="inputId2" value="">
+                <button type="button" class="btn btn-primary" onclick="anamenu.save();">Kaydet</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Kapat</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Small Size -->
+<div class="modal fade" id="smallModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="title" id="smallModalLabel"></h4>
+            </div>
+            <div class="modal-body"> Dikkat. Bu menüyü silmek istediğinize emin misiniz? Dilerseniz silmeden yayından kaldırabilirsiniz. </div>
+            <div class="modal-footer">
+                <input type="hidden" name="id" id="inputId" value="">
+                <button type="button"  class="btn btn-danger" onclick="anamenu.deleteItem();">Sil</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Vazgeç</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>window.anamenu.list();</script>
+
+
+

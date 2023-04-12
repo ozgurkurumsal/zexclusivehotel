@@ -1,0 +1,86 @@
+.t-and-c-content-wrapper {
+	p {margin: 0;color: #797979;font-size: 16px;line-height: 26px;font-family: 'Open Sans';
+		+ p {margin-top: 30px;}
+	}
+	p.highlight {
+		font-family: 'Lora';
+		font-style: italic;
+		font-size: 22px;line-height: 26px;
+		color: #242424;
+		+ p {margin-top: 20px;}
+	}
+	.t-and-c-content {
+		&.left-content {padding-right: 30px;}
+	}
+}
+
+.accordion-style-one {
+	.title-box {
+		margin-top: -10px;
+		margin-bottom: 60px;
+		h3 {margin: 0;color: #242424;font-family: 'Poppins';font-weight: 600;font-size: 32px;
+			span {color: #C19B76;font-weight: bold;font-style: italic;font-family: 'Playfair Display';}
+		}
+		.line {display: block;width: 40px;height: 2px;background:#C19B76;margin-top: 15px;}
+	}
+	.faq-accrodion {padding-right: 70px;}
+	.accrodion {
+		+ .accrodion {margin-top: 50px;}
+		.accrodion-title {
+			position: relative;
+			padding-left: 30px;
+			cursor: pointer;
+			h4 {margin: 0;color: #000000;font-weight: 600;font-family: 'Poppins';font-size: 20px;
+				&:after {
+					content: '+';
+					position: absolute;
+					top:50%;
+					left: 0;
+					transform: translateY(-50%);
+					font-size: 24px;color: #00091F;
+				}
+			}
+		}
+		.accrodion-content {
+			padding-left: 30px;
+			padding-top: 20px;
+			p {margin: 0;color: #797979;font-size: 16px;line-height: 26px;font-family: 'Open Sans';}
+		}
+		&.active {
+			.accrodion-title {
+				h4:after {
+					content: '-';
+				}
+			}
+		}
+	}
+}
+
+.faq-submission-form-wrapper {
+	background: #000 url(../img/faq-submission-bg.jpg) center center no-repeat;
+	background-size: cover;
+	.title {
+		margin-bottom: 60px;
+		h3 {margin: 0;color: #fff;font-size: 32px;font-family: 'Poppins';font-weight: 600;
+			&:after {
+				content: '';
+				width: 40px;
+				height: 2px;
+				background:#C19B76;
+				display: inline-block;
+				vertical-align: baseline;
+				margin-left: 24px;
+			}
+		}
+	}
+	.faq-submission-form {
+		input, textarea {display: block;width: 100%;border: none;outline: none;background-color: transparent;border-bottom: 1px solid rgba(#e3e3e3, .2);height: 50px;color: rgba(#FFFFFF, .7);font-size: 16px;font-family: 'Poppins';
+			@include placeholder {color: rgba(#FFFFFF, .7);}
+		}
+		input+ input {margin-top: 32px;}
+		textarea {height: 145px;margin-top: 40px;}
+		button[type=submit] {padding: 0;color: #FFFFFF;background:#C19B76;font-size: 17px;font-family: 'Poppins';font-weight: 500;width: 190px;height: 54px;line-height: 54px;transition: all .4s ease;margin-top: 40px;
+			&:hover {background:#fff;color: #C19B76;}
+		}
+	}
+}

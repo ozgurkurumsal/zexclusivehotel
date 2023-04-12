@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home page</title>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+
+</head>
+<body>
+
+<table id="mytable" class="display">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Position</th> 
+            <th>Office</th>
+            <th>Extn.</th>
+            <th>Start date</th>
+            <th>Salary</th> 
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <th>Id</th>
+            <th>Position</th>
+            <th>Office</th>
+            <th>Extn.</th>
+            <th>Start date</th>
+            <th>Salary</th>
+        </tr>
+    </tfoot>
+
+</table>
+
+<!-- <script src="js/jquery.slim.min.js"></script>
+<script src="js/jquery.dataTables.min.js"></script>
+<script src="js/main-min.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+
+<script>
+   
+   setUpDataTable();
+
+async function setUpDataTable() {
+
+  
+     const res = await fetch('services/urunler.php');
+     const data = await res.json();
+  
+
+  var aDemoItems  = data; //
+  var jsonString = JSON.stringify(aDemoItems  ); //for testing
+  
+// //Load  datatable
+  var oTblReport = $("#mytable")
+
+ oTblReport.DataTable ({
+     "data" : aDemoItems,
+     "columns" : [
+        //  { title: "Id" },
+         { "data" : "id" },
+         { "data" : "AnaKategori" },
+         { "data" : "AraKategori" },
+         { "data" : "AltKategori" },
+         { "data" : "UrunAdi" },
+         { "data" : "Stok" }
+     ]
+ });
+
+//     $(document).ready(function() {
+
+//         $('#mytable').DataTable({
+//     "Processing": true,
+//       "ajax": {
+//         "url": "services/urunler.php",
+//         "dataSrc": ""
+//       },
+//       "columns": [
+//         { "data": "id" },
+//         { "data": "AnaKategori" },
+//         { "data": "AraKategori" },
+//         { "data": "AltKategori" },
+//         { "data": "UrunAdi" },
+//         { "data": "Stok" }
+//         // { "data": "third" },
+//         // { "data": "fourth" },
+//         // { "data": "fifth" },
+//         // { "data": "six" }
+//       ] 
+//     });
+// });
+
+       
+//     $('#mytable').DataTable( {
+//         "ajax": {
+//         "url": "http://hytkirtasiye.com.tr/adminiki/sayfalar/services/urunler.php",
+//        "type": "GET"
+//      }
+//         // "ajax": "http://hytkirtasiye.com.tr/adminiki/sayfalar/services/urunler.php",
+//         // "columns": [
+//         //     // { "data": "id" },
+//         //     // { "data": "position" },
+//         //     // { "data": "office" },
+//         //     // { "data": "extn" },
+//         //     // { "data": "start_date" },
+//         //     // { "data": "id" }
+//         // ]
+//     } );
+// } );
+
+
+
+//     const res = await fetch('http://hytkirtasiye.com.tr/adminiki/sayfalar/services/urunler.php');
+//     const data = await res.json();
+
+//     // var users = data.map(el => Object.values(el));
+
+//     var aDemoItems  = data; //
+//     var jsonString = JSON.stringify(aDemoItems  ) //for testing
+     
+//     // console.log(jsonString);
+//    //Load  datatable
+    // var oTblReport = $("#mytable");
+ 
+    // oTblReport.DataTable ({
+    //     ajax: 'http://hytkirtasiye.com.tr/adminiki/sayfalar/services/urunler.php',
+    //     columns: [
+    //     { data: 0 },
+    //     { data: 1 },
+    //     { data: 2 },
+    //     { data: 3 },
+    //     { data: 4 },
+    //     { data: 5 }
+    // ]
+    // //     columns: [
+    // //     { "data": 'id' }
+    // //     // { data: 'position' },
+    // //     // { data: 'salary' },
+    // //     // { data: 'state_date' },
+    // //     // { data: 'office' },
+    // //     // { data: 'extn' }
+    // // ]
+    //     // "processing": true,
+    //     // "data" : aDemoItems,
+    //     // "columns" : [
+    //     //     // { title : data.id }
+    //     //     { "data" : "id" },
+    //     //     { "data" : "AnaKategori" },
+    //     //     { "data" : "AraKategori" },
+    //     //     { "data" : "AltKategori" },
+    //     //     { "data" : "UrunAdi" },
+    //     //     { "data" : "Stok" },
+    //     //     // { "data" : "lastName" },
+    //     //     // { "data" : "gender" },
+    //     //     // { "data" : "dob" },
+    //     //     // { "data" : "race" }
+    //     // ]
+    // });
+
+    // $(document).ready( () => {
+
+    //     $('#mytable').DataTable( {
+
+    //       data: users,
+    //       columns : [
+    //           { title: "Id" },
+    //           { title: "Anakategori" },
+    //           { title: "Ara kategori" },
+    //           { title: "Ürün Adı" },
+    //       ]
+    //   });
+    // });
+}
+
+// Çalışan Javascript örneği//
+// function LoadCurrentReport(oResults) {
+ 
+//  var aDemoItems  = oResults.lDemographicItems; //
+//  var jsonString = JSON.stringify(aDemoItems  ) //for testing
+  
+// //Load  datatable
+//  var oTblReport = $("#tblReportResultsDemographics")
+
+//  oTblReport.DataTable ({
+//      "data" : jsonString,
+//      "columns" : [
+//          { "data" : "patientId" },
+//          { "data" : "otherId" },
+//          { "data" : "firstName" },
+//          { "data" : "lastName" },
+//          { "data" : "gender" },
+//          { "data" : "dob" },
+//          { "data" : "race" }
+//      ]
+//  });
+// }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,249 @@
+.about-resturants {
+    .resturant-content {
+        .title {
+            margin-bottom: 40px;
+            h3 {
+                margin: 0;
+                color: #232323;
+                font-family: 'Poppins';
+                font-size: 45px;
+                line-height: 55px;
+                font-weight: 300;
+                span {
+                    font-size: 32px;
+                    font-weight: 600;
+                }
+            }
+            .line {
+                display: block;
+                width: 50px;
+                height: 2px;
+                background: #C09A76;
+                margin-top: 10px;
+            }
+        }
+        p {
+            font-family: 'Open Sans';
+            font-size: 16px;
+            line-height: 26px;
+            color: #787878;
+            margin: 0;
+        }
+        p.highlight,
+        p.contact-text,
+        a.make-online {
+            font-family: 'Lora';
+            font-style: italic;
+            color: #232323;
+            font-size: 22px;
+            line-height: 26px;
+        }
+        p.highlight {
+            margin-bottom: 15px;
+        }
+        p.contact-text {}
+        a.make-online {
+            display: inline-block;
+            margin-top: 20px;
+            transition: all .4s ease;
+            &:hover {
+                color: #C09A76;
+            }
+        }
+        .contact-box {
+            margin-top: 40px;
+            padding: 25px 0;
+            border-top: 1px solid #dcdcdc;
+            border-bottom: 1px solid #dcdcdc;
+        }
+    }
+}
+
+.main-dish {
+    .title {
+        margin-bottom: 40px;
+        h3 {
+            margin: 0;
+            color: #232323;
+            font-family: 'Poppins';
+            font-weight: 600;
+            font-size: 32px;
+        }
+        .line {
+            display: block;
+            width: 40px;
+            height: 2px;
+            background: #C09A76;
+            margin-top: 20px;
+        }
+    }
+    .single-main-dish {
+        .img-box {
+            > img {width: 100%;}
+        }
+        .text-box {
+            margin-top: 30px;
+            h3,
+            p {
+                margin: 0;
+            }
+            h3 {
+                font-family: 'Poppins';
+                color: #232323;
+                font-weight: 500;
+                font-size: 22px;
+            }
+            p {
+                font-size: 16px;
+                line-height: 26px;
+                color: #787878;
+                font-family: 'Open Sans';
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+.menu-tab-title-box {
+    background: #ECECEC;
+    padding-top: 100px;
+    padding-bottom: 530px;
+    .title-box {
+        margin-bottom: 40px;
+        h3 {
+            margin: 0;
+            color: #232323;
+            font-family: 'Poppins';
+            font-weight: 600;
+            font-size: 32px;
+        }
+        .line {
+            display: block;
+            width: 40px;
+            height: 2px;
+            background: #C09A76;
+            margin-top: 20px;
+        }
+    }
+}
+
+.menu-tab-content-box {
+	padding-bottom: 100px;
+	position: relative;
+	margin-top: -480px;
+	ul.tab-title {
+		margin: 0;padding: 0;list-style: none;
+		margin-left: -5px;
+		margin-right: -5px;
+		li {
+			display: inline-block;vertical-align: middle;
+			padding: 0 5px;
+			&.active {
+				a {background:#fff;color: #232323;border-bottom-color: #fff;}
+			}
+			a {
+				display: block;
+				color: #fff;
+				background:#C09A76;
+				font-size: 18px;
+				font-family: 'Poppins';
+				font-weight: 500;
+				padding: 11px 40px;
+				border: 1px solid #DBDBDB;
+			}
+		}
+	}
+	.tab-content {
+		background:#fff;
+		padding: 50px 30px;
+		border: 1px solid #DCDCDC;
+		margin-top: -1px;
+	}
+	.time-table {
+		padding: 19px 0;
+		margin-bottom: 40px;
+		border-bottom: 1px solid #e9e9e9;
+		p {margin: 0;font-size: 16px;font-family: 'Poppins';font-weight: 500;color: #B1B1B1;}
+	}
+	.single-price-box {
+		+.single-price-box {border-top: 1px solid #e9e9e9;padding-top: 40px;margin-top: 40px;}
+		.price-title {
+			h3, p {margin: 0;}
+			h3 {font-size: 20px;color: #232323;font-family: 'Poppins';font-weight: 600;}
+			p {color: #787878;font-family: 'Open Sans';font-size: 16px;margin-top: 5px;}
+		}
+		.price-box {
+			p {margin: 0;font-size: 40px;font-family: 'Lora';font-style: italic;color: #C09A76;line-height: 53px;}
+		}
+	}
+}
+
+.book-table {
+    background: #000 url(../img/book-table-bg.jpg) center center no-repeat;
+    background-size: cover;
+    padding: 50px 0;
+    .form-content {
+        background: #191919;
+        padding: 45px 50px;
+        .title {
+            margin-bottom: 30px;
+            h3 {
+                margin: 0;
+                color: #FFFFFF;
+                font-family: 'Poppins';
+                font-size: 32px;
+                font-weight: 400;
+            }
+        }
+        .row {
+            margin-left: -7.5px;
+            margin-right: -7.5px;
+            [class*=col-] {
+                padding-left: 7.5px;
+                padding-right: 7.5px;
+            }
+        }
+        .book-table-form {
+            input,
+            textarea {
+                border: none;
+                outline: none;
+                background: #111111;
+                display: block;
+                width: 100%;
+                font-size: 14px;
+                color: rgba(#FFFFFF, .40);
+                height: 43px;
+                padding-left: 25px;
+                font-family: 'Poppins';
+                margin-bottom: 15px;
+                @include placeholder {
+                    color: rgba(#FFFFFF, .4);
+                }
+            }
+            textarea {
+                height: 125px;
+                padding-top: 10px;
+            }
+            button[type=submit] {
+                padding: 0;
+                border: none;
+                outline: none;
+                background: #C09A76;
+                color: #fff;
+                font-size: 13px;
+                font-family: 'Poppins';
+                letter-spacing: .24em;
+                text-transform: uppercase;
+                width: 173px;
+                height: 42px;
+                margin-top: 10px;
+                transition: all .4s ease;
+                &:hover {
+                    color: #C09A76;
+                    background: #fff;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,202 @@
+@media screen and (max-width: 1280px) {
+    .wrapper {
+        width: 100%;
+        padding: 0 15px;
+    }
+    .wrapper.padding0 {
+        padding: 0 0;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .aboutSection .img {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 500px;
+        flex: 0 0 500px;
+    }
+    .aboutSection .text {
+        padding-top: 0;
+        background: none;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    
+}
+
+@media screen and (max-width: 1080px) {
+    ul.navMenu li {
+        margin-right: 7px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .hidden_991, ul.navMenu, .language {
+        display: none !important;
+    }
+    .display_991, #sys_btn_toogle_menu, #support {
+        display: block !important;
+    }
+    .aboutSection {
+        margin-top: 0;
+    }
+    .aboutSection .wrapper {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .aboutSection .img {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+    }
+    .aboutSection .text {
+        padding-left: 0;
+    }
+    .searchBox .input-field {
+        border: 1px solid #c1b49a;
+        -ms-flex: 0 0 calc(50% - 10px);
+        -webkit-box-flex: 0;
+        flex: 0 0 calc(50% - 10px);
+        max-width: calc(50% - 10px);
+    }
+    .searchBox .input-field:first-child {
+        border-left-width: 1px;
+    }
+    .searchBox .submitBtn {
+        margin-bottom: 15px;
+        -ms-flex: 0 0 calc(50% - 10px);
+        -webkit-box-flex: 0;
+        flex: 0 0 calc(50% - 10px);
+        max-width: calc(50% - 10px);
+    }
+    .resultItem .img {
+        -ms-flex: 0 0 100%;
+        -webkit-box-flex: 0;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .resultItem .desc {
+        margin-top: 30px;
+        -ms-flex: 0 0 100%;
+        -webkit-box-flex: 0;
+        flex: 0 0 100%;
+        max-width: 100%;
+        background-position: 95% top;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .hidden_767 {
+        display: none !important;
+    }
+    .display_767{
+        display: block !important;
+    }
+    .pageTitle strong::before, 
+    .pageTitle strong::after {
+        display: none;
+    }
+    #owl-roomList .item {
+        margin-bottom: 0;
+    }
+    .introBtn {
+        padding: 100px 0 0;
+        background-size: contain;
+    }
+    ul.galleryPhotos li {
+        -ms-flex: 0 0 33.333%;
+        -webkit-box-flex: 0;
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+    .contactForm form .input-field.w3 {
+        -ms-flex: 0 0 100%;
+        -webkit-box-flex: 0;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .map {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .hidden_640 {
+        display: none !important;
+    }
+    #owl-roomList .item a p {
+        min-height: 1px;
+    }
+    .resultItem .img {
+        flex-direction: column;
+    }
+    .img-link {
+        top: 0;
+        left: 0;
+        right: 0;
+        position: relative;
+    }
+    .resultItem .img .box {
+        width: 100%;
+        height: auto;
+        margin-top: 15px;
+        padding: 25px 0 15px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .hidden_540 {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hidden_480 {
+        display: none !important;
+    }
+    .display_480 {
+        display: block !important;
+    }
+    .searchBox .input-field, .searchBox .submitBtn {
+        -ms-flex: 0 0 calc(100% - 10px);
+        -webkit-box-flex: 0;
+        flex: 0 0 calc(100% - 10px);
+        max-width: calc(100% - 10px);
+    }
+    #owl-roomList::before {
+        background-size: contain;
+    }
+    .newsletter {
+        padding-right: 0;
+    }
+    .newsletter .submitBtn {
+        width: 100%;
+        height: 36px;
+        display: block;
+        margin-top: 7px;
+        position: relative;
+    }
+    ul.galleryPhotos li {
+        -ms-flex: 0 0 50%;
+        -webkit-box-flex: 0;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .contactInfo, .contactForm, .contactMap {
+        padding: 20px 20px 0;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .logo {
+        max-width: 190px;
+    }
+    .logo img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    
+}

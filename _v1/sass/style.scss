@@ -1,0 +1,241 @@
+/***************************************************************************************************************
+||||||||||||||||||||||||||||       MASTER STYLESHEET FOR Mendoz Suit          ||||||||||||||||||||||||||||||||||
+****************************************************************************************************************
+||||||||||||||||||||||||||||              TABLE OF CONTENT                  ||||||||||||||||||||||||||||||||||||
+****************************************************************************************************************
+****************************************************************************************************************
+* 1. imported styles 
+* 2. miscelnious styles 
+* 3. header styles 
+* 4. banner styles 
+* 5. cta styles 
+* 6. rooms styles 
+* 7. features styles 
+* 8. search popup styles 
+* 9. footer styles 
+* 10. gallery styles 
+* 11. testimonials styles 
+* 12. video styles 
+* 13. blog styles 
+* 14. offer styles 
+* 15. inner banner styles 
+* 16. about styles 
+* 17. error 404 styles 
+* 18. activites styles 
+* 19. coming soon styles 
+* 20. accomodation styles 
+* 21. services styles 
+* 22. contact styles 
+* 23. instagallery styles 
+* 24. packages styles 
+* 25. booking form styles 
+* 26. sidebar styles 
+* 27. faq styles 
+* 28. our history styles 
+* 29. spa gallery styles 
+* 30. resturants styles 
+* 31. events styles 
+* 32. booking page styles 
+****************************************************************************************************************
+||||||||||||||||||||||||||||            End TABLE OF CONTENT                ||||||||||||||||||||||||||||||||||||
+****************************************************************************************************************/
+
+
+// math functions are not included in sass
+@import "drop-shadow-converter/mathfunctions";
+// import converter
+@import "drop-shadow-converter/drop-shadow-converter";
+// template sass helper functions
+@import "_helper-function.scss";
+
+/************************** 
+* 1. imported styles 
+***************************/
+
+@import 'modules/_imported';
+
+/************************** 
+* 2. miscelnious styles 
+***************************/
+
+@import 'modules/_miscelnious';
+
+/************************** 
+* 3. header styles 
+***************************/
+
+@import 'modules/_header';
+
+/************************** 
+* 4. banner styles 
+***************************/
+
+@import 'modules/_banner';
+
+/************************** 
+* 5. cta styles 
+***************************/
+
+@import 'modules/_cta';
+
+/************************** 
+* 6. rooms styles 
+***************************/
+
+@import 'modules/_rooms';
+
+/************************** 
+* 7. features styles 
+***************************/
+
+@import 'modules/_features';
+
+/************************** 
+* 8. search popup styles 
+***************************/
+
+@import 'modules/_search-popup';
+
+/************************** 
+* 9. footer styles 
+***************************/
+
+@import 'modules/_footer';
+
+/************************** 
+* 10. gallery styles 
+***************************/
+
+@import 'modules/_gallery';
+
+/************************** 
+* 11. testimonials styles 
+***************************/
+
+@import 'modules/_testimonials';
+
+/************************** 
+* 12. video styles 
+***************************/
+
+@import 'modules/_video';
+
+/************************** 
+* 13. blog styles 
+***************************/
+
+@import 'modules/_blog';
+
+/************************** 
+* 14. offer styles 
+***************************/
+
+@import 'modules/_offer';
+
+/************************** 
+* 15. inner banner styles 
+***************************/
+
+@import 'modules/_inner-banner';
+
+/************************** 
+* 16. about styles 
+***************************/
+
+@import 'modules/_about';
+
+/************************** 
+* 17. error 404 styles 
+***************************/
+
+@import 'modules/_error-404';
+
+/************************** 
+* 18. activites styles 
+***************************/
+
+@import 'modules/_activites';
+
+/************************** 
+* 19. coming soon styles 
+***************************/
+
+@import 'modules/_coming-soon';
+
+/************************** 
+* 20. accomodation styles 
+***************************/
+
+@import 'modules/_accomodation';
+
+/************************** 
+* 21. services styles 
+***************************/
+
+@import 'modules/_services';
+
+/************************** 
+* 22. contact styles 
+***************************/
+
+@import 'modules/_contact';
+
+/************************** 
+* 23. instagallery styles 
+***************************/
+
+@import 'modules/_instagallery';
+
+/************************** 
+* 24. packages styles 
+***************************/
+
+@import 'modules/_packages';
+
+/************************** 
+* 25. booking form styles 
+***************************/
+
+@import 'modules/_booking-form';
+
+/************************** 
+* 26. sidebar styles 
+***************************/
+
+@import 'modules/_sidebar';
+
+/************************** 
+* 27. faq styles 
+***************************/
+
+@import 'modules/_faq';
+
+/************************** 
+* 28. our history styles 
+***************************/
+
+@import 'modules/_our-history';
+
+/************************** 
+* 29. spa gallery styles 
+***************************/
+
+@import 'modules/_spa-gallery';
+
+/************************** 
+* 30. resturants styles 
+***************************/
+
+@import 'modules/_resturants';
+
+/************************** 
+* 31. events styles 
+***************************/
+
+@import 'modules/_events';
+
+/************************** 
+* 32. booking page styles 
+***************************/
+
+@import 'modules/_booking';

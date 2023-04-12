@@ -1,0 +1,435 @@
+.with-right-sidebar {
+    .has-right-sidebar {
+        padding-right: 30px;
+    }
+}
+
+.with-left-sidebar {
+    .has-left-sidebar {
+        padding-left: 30px;
+    }
+}
+
+.sidebar {
+    .single-sidebar {
+        +.single-sidebar {
+            margin-top: 50px;
+        }
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .title {
+            margin-bottom: 25px;
+            h3 {
+                margin: 0;
+                color: #242424;
+                font-family: 'Poppins';
+                font-weight: 600;
+                font-size: 20px;
+            }
+        }
+        &.search-sidebar {
+            form {
+                width: 100%;
+                border: 1px solid #303032;
+                height: 52px;
+                position: relative;
+                background: #303032;
+            }
+            input,
+            button[type=submit] {
+                border: none;
+                outline: none;
+                background-color: transparent;
+            }
+            input {
+                width: 100%;
+                height: 100%;
+                font-family: 'Open Sans';
+                color: #909090;
+                font-size: 15px;
+                padding-left: 20px;
+                @include placeholder {
+                    color: #909090;
+                }
+            }
+            button {
+                color: #FFFFFF;
+                font-size: 16px;
+                position: absolute;
+                top: 50%;
+                right: 15px;
+                transform: translateY(-50%);
+                padding: 0;
+            }
+        }
+        &.categories-widget {
+            ul li a {
+                display: block;
+                position: relative;
+                color: #797979;
+                font-family: 'Poppins';
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                transition: all .4s ease;
+                border-bottom: 1px solid #E6E6E6;
+                padding-bottom: 8px;
+                margin-bottom: 8px;
+                &:after {
+                    content: "\f105";
+                    color: #C7C7C7;
+                    font-family: 'FontAwesome';
+                    font-size: 14px;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                    transition: all .4s ease;
+                    margin-top: -5px;
+                }
+                &:hover {
+                    color: #C19B76;
+                    &:after {
+                        color: #C19B76;
+                    }
+                }
+            }
+        }
+        &.tags-widget {
+            .tags-list {
+                margin-left: -5px;
+                margin-right: -5px;
+                li {
+                    display: inline-block;
+                    vertical-align: middle;
+                    padding: 0 5px;
+                }
+                a {
+                    display: block;
+                    border: 1px solid #E4E4E4;
+                    color: #A6A6A6;
+                    font-family: 'Open Sans';
+                    font-size: 15px;
+                    line-height: 26px;
+                    padding: 5px 15.5px;
+                    margin-bottom: 10px;
+                    transition: all .4s ease;
+                    &:hover {
+                        background: #C19B76;
+                        border-color: #C19B76;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        &.recent-news-widget {
+            .recent-news-list {
+                li {
+                    border-bottom: 1px solid #E1E1E1;
+                    +li {
+                        margin-top: 20px;
+                    }
+                    h3 {
+                        margin: 0;
+                        font-size: 16px;
+                        line-height: 22px;
+                        color: #242424;
+                        font-family: 'Poppins';
+                        font-weight: 500;
+                        transition: all .4s ease;
+                        margin-bottom: 5px;
+                        &:hover {
+                            color: #C19B76;
+                            text-decoration: underline;
+                        }
+                    }
+                    span {
+                        display: block;
+                        vertical-align: middle;
+                        font-size: 15px;
+                        font-weight: 600;
+                        color: #9A9A9A;
+                        font-family: 'Open Sans';
+                        margin-bottom: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.booking-sidebar {
+    margin-left: -50px;
+    .single-booking-sidebar {
+        +.single-booking-sidebar {
+            margin-top: 50px;
+        }
+        &.overlapped {
+            margin-top: -168px;
+            position: relative;
+            z-index: 10;
+        }
+    }
+    .booking-page-form-wrapper {
+        .price-box {
+            background: #000000;
+            font-family: 'Poppins';
+            font-size: 16px;
+            color: #FFFFFF;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            padding: 20.5px 0;
+            padding-left: 33px;
+            span.regular {
+                color: #C6C6C6;
+                font-weight: 300;
+                text-decoration: line-through;
+                font-size: 24px;
+                display: inline-block;
+                vertical-align: bottom;
+                margin-right: 20px;
+            }
+            span.amount {
+                font-weight: 600;
+                font-size: 24px;
+                margin-right: 5px;
+                display: inline-block;
+                vertical-align: bottom;
+            }
+        }
+        .form-content {
+            border: 1px solid #DCDCDC;
+            border-top: 0;
+            background: #F3F3F3;
+            padding: 35px 30px 38px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            h3 {
+                margin: 0;
+                color: #232323;
+                font-family: 'Poppins';
+                font-weight: 600;
+                font-size: 22px;
+                margin-bottom: 35px;
+            }
+            input {
+                border: none;
+                outline: none;
+                background-color: transparent;
+                width: 100%;
+                border: 1px solid #DEDEDE;
+                background: #FFFFFF;
+                color: #787878;
+                font-size: 15px;
+                font-family: 'Poppins';
+                height: 46px;
+                padding-left: 20px;
+                @include placeholder {
+                    color: #787878;
+                }
+                +input {
+                    margin-top: 25px;
+                }
+            }
+            button[type=submit] {
+                border: none;
+                outline: none;
+                background-color: transparent;
+                width: 100%;
+                text-align: center;
+                padding: 0;
+                height: 48px;
+                line-height: 48px;
+                text-transform: uppercase;
+                color: #fff;
+                background: #C09A76;
+                font-family: 'Poppins';
+                letter-spacing: .24em;
+                font-size: 13px;
+                margin-top: 30px;
+            }
+        }
+        &.with-calendar {
+            h3 {
+                font-size: 16px;
+                color: #232323;
+                font-weight: 400;
+                margin-bottom: 25px;
+            }
+            .inline-datepicker {
+                box-shadow: drop-shadow-converter(#000000, $angle: 90, $distance: 0px, $spread: 0, $size: 24px, $opacity: 10%);
+            }
+        }
+        &.extarnal-link {
+            h3 {
+                font-size: 16px;
+                color: #232323;
+                font-weight: 400;
+                margin-bottom: 25px;
+                line-height: 26px;
+                text-align: center;
+            }
+            a.book-btn {
+                border: none;
+                outline: none;
+                background-color: transparent;
+                width: 100%;
+                text-align: center;
+                padding: 0;
+                height: 48px;
+                line-height: 48px;
+                text-transform: uppercase;
+                color: #fff;
+                background: #C09A76;
+                font-family: 'Poppins';
+                letter-spacing: .24em;
+                font-size: 13px;
+                margin-top: 0px;
+                display: block;
+            }
+        }
+        &.booking-form-contact-style {
+            .form-box {
+                position: relative;
+                margin-bottom: 20px;
+                i {
+                    color: #A9A9A9;
+                    font-size: 15px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 20px;
+                }
+                input {
+                    border: none;
+                    outline: none;
+                    width: 100%;
+                    height: 42px;
+                    border: 1px solid rgba(#C0C0C0, .28);
+                    color: #4A4A4A;
+                    font-size: 15px;
+                    font-weight: 500;
+                    font-family: 'Poppins';
+                    padding-left: 20px;
+                    @include placeholder {
+                        color: #4A4A4A;
+                    }
+                }
+                .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+                    width: 100%;
+                }
+                .bootstrap-select>.dropdown-toggle {
+                    padding: 9.5px 0;
+                    border-radius: 0px;
+                    color: #4A4A4A;
+                    font-size: 15px;
+                    font-weight: 500;
+                    font-family: 'Poppins';
+                    padding-left: 20px;
+                    border: 1px solid rgba(#C0C0C0, .28);
+                }
+                .bootstrap-select.btn-group .dropdown-toggle .caret {
+                    right: 20px;
+                }
+            }
+            .form-content button[type=submit] {margin-top: 10px;}
+        }
+    }
+    .share-room-sidebar {
+        background: #191919;
+        padding: 15.5px 0;
+        padding-left: 35px;
+        i,
+        p {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        i {
+            color: #BFBFBF;
+            font-size: 27px;
+        }
+        p {
+            color: #FFFFFF;
+            font-family: 'Poppins';
+            font-size: 16px;
+            padding-left: 25px;
+            margin: 0;
+            line-height: 1em;
+        }
+    }
+    .cart-sidebar {
+        border: 1px solid #DBDBDB;
+        padding: 25px;
+        .icon-box,
+        .text-box {
+            display: table-cell;
+            vertical-align: top;
+        }
+        .icon-box {
+            i {
+                color: #C09A76;
+                font-size: 44px;
+            }
+        }
+        .text-box {
+            padding-left: 20px;
+            h3,
+            p {
+                margin: 0;
+            }
+            h3 {
+                color: #232323;
+                font-family: 'Poppins';
+                font-weight: 600;
+                font-size: 22px;
+                margin-bottom: 10px;
+            }
+            p {
+                color: #9F9F9F;
+                font-family: 'Poppins';
+                font-weight: 500;
+                font-size: 16px;
+            }
+        }
+    }
+    .contact-information {
+        background: #F5F5F5;
+        border: 1px solid #DBDBDB;
+        padding: 25px 25px;
+        h3 {
+            margin: 0;
+            color: #232323;
+            font-family: 'Poppins';
+            font-weight: 600;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        .single-contact-info {
+            +.single-contact-info {
+                margin-top: 10px;
+            }
+            .icon-box,
+            .text-box {
+                display: table-cell;
+                vertical-align: middle;
+            }
+            .icon-box {
+                width: 27px;
+                i {
+                    color: #C09A76;
+                    font-size: 27px;
+                }
+            }
+            .text-box {
+                padding-left: 22px;
+                color: #232323;
+                font-size: 16px;
+                font-family: 'Poppins';
+            }
+        }
+    }
+}

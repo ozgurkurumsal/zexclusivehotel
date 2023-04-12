@@ -1,0 +1,92 @@
+.booking-box-wrapper {
+	margin-top: -155px;
+	position: relative;
+	z-index: 99;
+	.thm-container {
+		background:#ffffff;
+		padding: 20px 0;
+		padding-left: 35px;
+		padding-right: 35px;
+	}
+	.btn-box {
+		text-align: center;
+		padding: 11px 0;
+		button[type=submit] {border: none;outline: none;width: 100%;max-width: 220px;height: 54px;background:#C19B76;color: #fff;font-family: 'Poppins';font-weight: 500;font-size: 17px;transition: all .4s ease;padding: 0;line-height: 54px;
+			&:hover {background:#242424;color: #fff;}
+		}
+	}
+	.single-form-box {
+		border-right: 1px solid #DCDCDC;
+		cursor: pointer;
+		position: relative;
+		.form-label {font-size: 13px;text-transform: uppercase;font-family: 'Open Sans';font-weight: 600;color: #242424;margin-bottom: 15px;}
+		.form-text {
+			span {display: inline-block;vertical-align: baseline;}
+			span.count {font-size: 40px;font-weight: bold;font-style: italic;color: #C19B76;font-family: 'Lora';}
+			span.date {color: #797979;font-family: 'Lora';font-style: italic;font-size: 16px;margin-left: 15px;}
+			span.angle {font-size: 21px;color: #AAAAAA;margin-left: 35px;}
+		}
+		&.checkout-box {
+			padding-left: 20px;
+		}
+		&.guest-box {
+			padding-left: 15px;
+			.form-text {position: relative;display: inline-block;}
+			.angle {
+				position: absolute;
+				bottom: 0;
+				right: -35px;
+				i {display: block;}
+			}
+		}
+		input.checkin,
+		input.checkout {visibility: hidden;height: 0;border: none;opacity: 0;padding: 0;width: 0;position: absolute;top:0;left: 0;}
+	}
+	&.home-page-four {
+		margin-top: -58px;
+		.thm-container {
+			box-shadow: drop-shadow-converter(#000000, $angle: 90, $distance: 0px, $spread: 0, $size: 59px, $opacity: 15%);
+		}
+	}
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+	border-color: #C19B76;
+	background:#C19B76;
+	color: #fff;
+}
+.ui-datepicker td span, .ui-datepicker td a {text-align: center;}
+
+
+.booking-form-home-five {
+	margin-top: -92px;
+	position: relative;
+	z-index: 99;
+	.thm-container {
+		background:#1F1F1F;
+		padding: 25px 45px;
+	}
+	.row {
+		margin-left: -7.5px;
+		margin-right: -7.5px;
+		[class*=col-] {width: 20%;float: left;
+			padding-left: 7.5px;
+			padding-right: 7.5px;
+		}
+	}
+	.banner-booking-form {
+        .form-box {
+            position: relative;
+            i {color: #A9A9A9;font-size: 15px;position: absolute;top: 50%;transform: translateY(-50%);right: 20px;}
+            input {border: none;outline: none;width: 100%;height: 42px;border: 1px solid rgba(#C0C0C0,.28);color: #4A4A4A;font-size: 15px;font-weight: 500;font-family: 'Poppins';padding-left: 20px;
+                @include placeholder {color: #4A4A4A;}
+            }
+            .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {width: 100%;}
+            .bootstrap-select>.dropdown-toggle {padding: 9.5px 0;border-radius: 0px;color: #4A4A4A;font-size: 15px;font-weight: 500;font-family: 'Poppins';padding-left: 20px;border: 1px solid rgba(#C0C0C0,.28);}            
+            .bootstrap-select.btn-group .dropdown-toggle .caret {right: 20px;}
+        }
+        button[type=submit] {color: #FFFFFF;font-size: 17px;text-transform: capitalize;letter-spacing: .0em;font-family: 'Poppins';background:#C19B76;border-radius: 0px;width: 100%;height: 42px;padding: 0;line-height: 42px;transition: all .4s ease;font-weight: 500;
+            &:hover{background:#fff;color: #1F1F1F;}
+        }
+    }
+}

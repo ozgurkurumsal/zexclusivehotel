@@ -1,0 +1,12 @@
+.inner-banner {
+	background:#191919 url(../img/inner-banner-bg.jpg) center center no-repeat;
+	background-size: cover;
+	padding: 99px 0;
+	h2 {margin: 0;color: #fff;font-family: 'Poppins';font-weight: 600;font-size: 48px;}
+	.breadcumb {margin-top: 10px;
+		a,i,span {display: inline-block;vertical-align: middle;}
+		a {color: #3C3C3C;font-family: 'Poppins';font-weight: 500;font-size: 13px;}
+		i {color: #FFFFFF;font-size: 14px;margin-left: 7px;margin-right: 7px;}
+		span {color: #FFFFFF;font-family: 'Poppins';font-weight: 500;font-size: 13px;}
+	}
+}

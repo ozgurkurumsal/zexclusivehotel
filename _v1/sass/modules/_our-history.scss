@@ -1,0 +1,85 @@
+.our-history-about {
+	.title {
+		margin-bottom: 15px;
+		h3 {margin: 0;color: #242424;font-family: 'Poppins';font-size: 32px;font-weight: 600;
+			&:after {
+				content: '';
+				display: inline-block;
+				vertical-align: baseline;
+				background:#C19B76;
+				width: 40px;
+				height: 2px;
+				margin-left: 20px;
+			}
+		}
+	}
+	.history-content {
+		padding-right: 28px;
+		p {margin: 0;color: #797979;font-size: 16px;line-height: 28px;font-family: 'Open Sans';
+			+ p {margin-top: 25px;}
+		}
+		p.highlight {color: #242424;font-family: 'Lora';font-style: italic;font-size: 20px;
+			+ p {margin-top: 10px;}
+		}
+	}
+}
+
+.history-timeline {
+	.single-timeline-history {
+		+ .single-timeline-history {margin-top: 40px;}
+		
+		.year-box, .text-box {
+			display: table-cell;
+			vertical-align: top;
+		}
+		.year-box {
+			position: relative;
+			&:before {
+				content: '';
+				width: 3px;
+				height: 230px;
+				background:#D2D2D2;
+				position: absolute;
+				bottom:-20px;
+				left: 50%;
+				transform: translateY(-50%);
+			}
+			.inner {
+				width: 108px;
+				height: 108px;
+				border-radius: 50%;
+				background: #C19B76;
+				line-height: 108px;
+				text-align: center;
+				font-family: 'Lato';
+				font-size: 28px;
+				font-weight: bold;
+				color: #fff;
+				position: relative;
+				z-index: 10;
+			}
+		}
+		.text-box {
+			padding-left: 60px;
+			h3, p {margin: 0;}
+			h3 {color: #242424;font-size: 26px;font-family: 'Poppins';font-weight: 600;margin-bottom: 15px;}
+			p {font-size: 16px;line-height: 28px;font-family: 'Open Sans';}
+		}
+		&:first-child {
+			.year-box {				
+				&:before {
+					display: none;
+				}
+			}	
+		}
+	}	
+}
+
+.feature-history-box {
+	.thm-container {padding-left: 170px;}
+	.img-box {
+		margin-bottom: 30px;
+		img + img {margin-left: 30px;}
+	}
+	p {font-size: 16px;line-height: 28px;font-family: 'Open Sans';margin: 0;}
+}

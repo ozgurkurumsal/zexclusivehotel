@@ -1,0 +1,242 @@
+<div class="col-lg-12">
+    <div class="card">
+        <!-- <div class="header">
+            <h2>Ürünler</h2>
+        </div> -->
+        <!-- <div class="card"> -->
+            <!-- <div class="header">
+                <h2>Rezervasyonlar</h2>
+            </div> -->
+            <div class="body">
+
+                <div class="header">
+                    <h2>Rezervasyonlar</h2>
+                </div>
+             
+            <!-- </div> -->
+            <!-- <div class="body"> -->
+            <div class="shadow p-3 mb-5 bg-white rounded">
+
+                <div class="shadow p-3 mb-5 bg-white rounded">
+                <button type="button" class="btn btn-outline-success" onclick="loadPage('urunEkle');">Ekle</button>
+                </div>
+                
+              <div class="table-responsive">
+                
+                <table id="mytable" class="display">
+                      <thead>
+                        <tr>
+                            <!-- <th>Id</th> -->
+                            <!-- <th>Rez Id</th>  -->
+                            <th>Kodu</th>
+                            <th>Oda Adı</th>
+                            <th>Giriş Tarihi</th>
+                            <th>Çıkış Tarihi</th>
+                            <th>Kişi Sayısı</th>
+                            <th>Çocuk Sayısı</th>
+                            <th>Tutar</th>
+                            <th>Adı</th>
+                            <th>Soyadı</th>
+                            <th>E Posta</th>
+                            <th>Ülke</th>
+                            <th>Telefon</th>
+                            <th>Adres</th>
+                            <th>Mesajınız</th>
+                            <th>Ödeme Tipi</th>
+                            <th>Ödenen Tutar</th>
+                            <th>Durumu</th>
+                            <th>Durum Açıklama</th>
+                            <th></th>
+                            <th></th>
+                           
+                        </tr>
+                    </thead>  
+                    <!-- <tfoot>
+                        <tr>
+                            <th>Id</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Extn.</th>
+                            <th>Start date</th>
+                            <th>Salary</th>
+                        </tr>
+                    </tfoot> -->
+
+                </table>    
+
+
+                  <!-- <table class="table m-b-0" id="table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Ürün Adı</th>
+                            <th>Ana Kategori</th>
+                            <th>START Date</th>
+                            <th>END Date</th> 
+                            <th>Ara Kategori</th>
+                            <th>Stok</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       
+                    </tbody>
+                </table>   -->
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    
+</div>
+
+
+
+
+
+<!-- Modal Dialogs ========= --> 
+<!-- Default Size -->
+<div class="modal fade" id="defaultModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="title" id="defaultModalLabel">Anamenü</h4>
+            </div>
+            <div class="modal-body"> 
+                
+                    <!-- <div class="header">
+                        <h2>Adı</h2>
+                    </div> -->
+                    
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-default">Adı</span>
+                            </div>
+                            <input name="adi" id="adi" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                
+                    
+                 
+            
+            </div> <!-- modal body-->
+
+            <div class="modal-footer">
+                <input type="hidden" name="id" id="inputId2" value="">
+                <button type="button" class="btn btn-primary" onclick="urunler.save();">Kaydet</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Kapat</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Small Size -->
+<div class="modal fade" id="smallModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="title" id="smallModalLabel"></h4>
+            </div>
+            <div class="modal-body"> Dikkat. Bu menüyü silmek istediğinize emin misiniz? Dilerseniz silmeden yayından kaldırabilirsiniz. </div>
+            <div class="modal-footer">
+                <input type="hidden" name="id" id="inputId" value="">
+                <button type="button"  class="btn btn-danger" onclick="urunler.deleteItem();">Sil</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Vazgeç</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>window.rezervasyonlar.list();</script>
+
+
+<script>
+
+  
+   setUpDataTable();
+
+
+async function setUpDataTable() {
+
+
+
+    console.log('Setup çalıştı');
+
+  
+     const res = await fetch('services/rezervasyonlar.php');
+     const data = await res.json();
+
+  /////////////////////////////////////////////////////////////
+  var aDemoItems  = data; //
+  var jsonString = JSON.stringify(aDemoItems  ); //for testing
+  
+// //Load  datatable
+  var oTblReport = $("#mytable");
+
+ oTblReport.DataTable ({
+     "data" : aDemoItems,
+     responsive: true,
+     autoWidth: true,
+     searching: true,
+     "ordering": false,
+    //  orderable : false,
+        //   columns: [
+             
+        //     //   { title: "Document" },
+        //     //   { title: "Content" },
+        //     //   { title: "", "defaultContent": "<button onclick='edititem();'>Edit</button>" },
+        //     //   { title: "", "defaultContent": "<button onclick='deleteitem();'>Delete</button>" }
+        //   ],
+     "columns" : [
+        //  { "data" : "odaId" },
+        //  { "data" : "rezervasyonId" },
+         { "data" : "rezervasyonKodu" },
+         { "data" : "odaAdi" },
+         { "data" : "formattedStartDate" },
+         { "data" : "formattedEndDate" },
+         { "data" : "kisiSayisi" },
+         { "data" : "cocukSayisi" },
+         { "data" : "tutar" },
+         { "data" : "adi" },
+         { "data" : "soyadi" },
+         { "data" : "eposta" },
+         { "data" : "ulke" },
+         { "data" : "telefon" },
+         { "data" : "adres" },
+         { "data" : "mesajiniz" },
+         { "data" : "odemeTipi" },
+         { "data" : "odenenTutar" },
+         { "data" : "durum" },
+         { "data" : "durumAciklamasi" },
+         { 'data': null, title: 'İşlemler', wrap: true, "render": function (item) { return '<div class="btn-group"> <button type="button" onclick="urunler.edit(' + item.odaId + ')" value="0" class="btn btn-warning" data-toggle="modal" data-target="#myModal">Düzenle</button></div>' } },
+         
+        //  { title: "", "defaultContent": "<button class='btn btn-outline-secondary'  onclick='urunler.edit(this);'>Düzenle</button>" },
+         { title: "", "defaultContent": "<button class='btn btn-danger btn-sm' id='data.odaId' onclick='urunler.remove(this);'>Sil</button>" }
+     ],
+    //  "columnDefs": [
+        // { "orderable": false, "targets": [1,2,3,4,5,6,7,8] },
+        // { "orderable": true, "targets": [1, 2, 3] }
+    // ]
+    columnDefs: [
+    {
+        targets: [3,4,5,6],
+        className: 'dt-body-center'
+    }
+  ]
+
+    // select: true
+   
+ });
+
+}
+
+
+
+</script>
+
+
+
+

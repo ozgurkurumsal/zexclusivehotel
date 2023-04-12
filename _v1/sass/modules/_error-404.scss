@@ -1,0 +1,13 @@
+.error-404-section {
+	background: #000 url(../img/404-bg.jpg) center center no-repeat;
+	background-size: cover;
+	padding-bottom: 225px;
+	padding-top: 240px;
+	h2, h3, p {margin: 0;}
+	h2 {color: #C19B76;font-family: 'Open Sans';font-weight: 800;font-size: 200px;line-height: 100px;margin-bottom: 58px;}
+	h3 {color: #FFFFFF;font-family: 'Poppins';font-weight: bold;font-size: 60px;margin-bottom: 10px;}
+	p {color: #FFFFFF;font-family: 'Poppins';font-weight: 500;font-size: 28px;margin-bottom: 60px;}
+	a.error-btn {width: 100%;max-width: 335px;border: 2px solid #FFFFFF;height: 77px;line-height: 73px;text-align: center;font-family: 'Poppins';font-weight: 600;font-size: 24px;color: #fff;display: inline-block;transition: all .4s ease;
+		&:hover {background:#C19B76;border-color: #C19B76;color: #fff;}
+	}
+}
